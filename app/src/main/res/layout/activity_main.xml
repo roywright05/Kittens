@@ -1,18 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/crema"
+    android:orientation="vertical"
+    android:weightSum="100"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/layout_1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_weight="66">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_image"
+        android:layout_width="@dimen/size_150"
+        android:layout_height="@dimen/size_150"
+        android:layout_centerInParent="true"
+        android:src="@drawable/kitten_1"
+        app:civ_border_color="@color/brown"
+        app:civ_border_width="@dimen/size_5" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/civ_image"
+            android:textSize="@dimen/text_16"
+            android:textStyle="italic"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/size_20"
+            android:text="some stuff goes here"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_1">
+
+    <ImageButton
+        android:id="@+id/ib_enter"
+        android:layout_width="@dimen/size_80"
+        android:layout_height="@dimen/size_80"
+        android:layout_centerInParent="true"
+        android:background="@drawable/kitten_2"/>
+
+        <TextView
+            android:id="@+id/tv_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter"
+            android:textSize="@dimen/text_22"
+            android:layout_below="@+id/ib_enter"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_50"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
