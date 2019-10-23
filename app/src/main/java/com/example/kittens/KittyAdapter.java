@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.kittens.model.ListItem;
 import com.squareup.picasso.Picasso;
-import com.squareup.picasso.PicassoProvider;
+
 
 import java.util.ArrayList;
 
@@ -32,7 +32,7 @@ public class KittyAdapter extends RecyclerView.Adapter<KittyAdapter.KittyViewHol
     public KittyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = LayoutInflater
-                .from(context) //this may change to context
+                .from(parent.getContext()) //this may change to context
                 .inflate(R.layout.list_item, parent, false);
         return new KittyViewHolder(view);
     }
