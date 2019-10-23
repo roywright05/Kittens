@@ -14,12 +14,13 @@
         android:id="@+id/layout_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="66">
+        android:layout_weight="55">
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civ_image"
         android:layout_width="@dimen/size_150"
         android:layout_height="@dimen/size_150"
-        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/size_80"
+        android:layout_centerHorizontal="true"
         android:src="@drawable/kitten_1"
         app:civ_border_color="@color/brown"
         app:civ_border_width="@dimen/size_5" />
@@ -31,9 +32,11 @@
             android:layout_below="@+id/civ_image"
             android:textSize="@dimen/text_16"
             android:textStyle="italic"
+            android:layout_margin="@dimen/size_20"
+            android:padding="@dimen/size_20"
             android:layout_centerInParent="true"
             android:layout_marginTop="@dimen/size_20"
-            android:text="some stuff goes here"/>
+            android:text="@string/description"/>
 
     </RelativeLayout>
 

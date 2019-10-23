@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Kittens</string>
+
     <string name="enter">Enter ↑</string>
+
+    <string name="description">
+
+        Welcome!  This is a one stop shop to show your love for
+        all the kittens around the world.  Think of us as Whiskerbook.
+        See what you like and give it a like!.
+    </string>
 </resources>
