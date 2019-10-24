@@ -75,7 +75,6 @@ public class Main2Activity extends AppCompatActivity {
 
                                 mListItems.add(new ListItem( imageUrl, creatorName, likeCount));
 
-
                             }
 
                             mKittyAdapter = new KittyAdapter(Main2Activity.this, mListItems);

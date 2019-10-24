@@ -48,14 +48,15 @@ public class KittyAdapter extends RecyclerView.Adapter<KittyAdapter.KittyViewHol
         String creator = listItem.getCreator();
         int likes = listItem.getNumOfLikes();
 
-        //Picasso.get().load(imageUrl).fit().centerInside().into(holder.mCircleImageView);
+
         holder.tvCreator.setText(creator);
         holder.tvLikes.setText("Likes: " + likes);
 
-        //Picasso.get().load(imageUrl).fit().centerInside().into(holder.mCircleImageView);
+        Picasso.get().load(imageUrl).fit().centerInside().into(holder.mCircleImageView);
+
+        //Picasso.get().load(imageUrl).into(holder.mCircleImageView);
 
     }
-
 
     @Override
     public int getItemCount() {
@@ -70,11 +71,10 @@ public class KittyAdapter extends RecyclerView.Adapter<KittyAdapter.KittyViewHol
         public KittyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            mCircleImageView = itemView.findViewById(R.id.civ_image);
+            mCircleImageView = itemView.findViewById(R.id.civ_large_image);
             tvCreator = itemView.findViewById(R.id.tv_creator);
             tvLikes = itemView.findViewById(R.id.tv_likes);
         }
     }
-
 
 }
