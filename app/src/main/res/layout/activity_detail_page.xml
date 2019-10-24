@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/size_20"
+    android:orientation="vertical"
+    tools:context=".DetailPage">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_300"
+        android:src="@drawable/kitty_53e5d4464f_640"
+        app:civ_border_width="@dimen/size_2"
+        app:civ_border_color="@color/light_blue"/>
+
+    <TextView
+        android:id="@+id/tv_detail_creator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_30"
+        android:textColor="@color/dark_blue"
+        android:text="@string/hello_blank_fragment" />
+
+    <TextView
+        android:id="@+id/tv_detail_likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_5"
+        android:textSize="@dimen/text_22"
+        android:textColor="@color/dark_blue"
+        android:text="@string/hello_blank_fragment" />
+
+</LinearLayout>

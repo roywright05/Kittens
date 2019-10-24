@@ -9,4 +9,7 @@
         all the kittens around the world.  Think of us as Whiskerbook.
         See what you like and give it a like!.
     </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

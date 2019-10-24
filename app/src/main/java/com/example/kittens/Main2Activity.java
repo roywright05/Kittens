@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.android.volley.Request;
@@ -21,7 +22,11 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class Main2Activity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity implements KittyAdapter.OnItemClickListener {
+
+    public static final String EXTRA_URL = "imageUrl";
+    public static final String EXTRA_CREATOR = "creatorName";
+    public static final String EXTRA_LIKES = "likeCount";
 
     private RecyclerView mRecyclerView;
     private KittyAdapter mKittyAdapter;
@@ -79,6 +84,10 @@ public class Main2Activity extends AppCompatActivity {
 
                             mKittyAdapter = new KittyAdapter(Main2Activity.this, mListItems);
                             mRecyclerView.setAdapter(mKittyAdapter);
+
+                            //Item Click listener code goes here
+
+                            mKittyAdapter.setOnItemClickListener(Main2Activity.this);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -94,5 +103,19 @@ public class Main2Activity extends AppCompatActivity {
         });
 
         mRequestQueue.add(request);
+    }
+
+    @Override
+    public void OnItemClick(int position) {
+
+        Intent detailIntent = new Intent(this, DetailPage.class);
+
+        ListItem clickedItem = mListItems.get(position);
+
+        detailIntent.putExtra(EXTRA_URL, clickedItem.getImageUrl());
+        detailIntent.putExtra(EXTRA_CREATOR, clickedItem.getCreator());
+        detailIntent.putExtra(EXTRA_LIKES, clickedItem.getNumOfLikes());
+
+        startActivity(detailIntent);
     }
 }

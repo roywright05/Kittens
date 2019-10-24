@@ -23,6 +23,17 @@ public class KittyAdapter extends RecyclerView.Adapter<KittyAdapter.KittyViewHol
 
     private ArrayList<ListItem> mListItems;
     private Context context;
+    private OnItemClickListener mOnItemClickListener;
+
+    public interface OnItemClickListener{
+
+        void OnItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener){
+
+        this.mOnItemClickListener = onItemClickListener;
+    }
 
     public KittyAdapter(Context context, ArrayList<ListItem> listItems) {
         mListItems = listItems;
@@ -74,6 +85,23 @@ public class KittyAdapter extends RecyclerView.Adapter<KittyAdapter.KittyViewHol
             mCircleImageView = itemView.findViewById(R.id.civ_large_image);
             tvCreator = itemView.findViewById(R.id.tv_creator);
             tvLikes = itemView.findViewById(R.id.tv_likes);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    if(mOnItemClickListener != null){
+
+                        int position = getAdapterPosition();
+
+                        if(position != RecyclerView.NO_POSITION){
+
+                            mOnItemClickListener.OnItemClick(position);
+                        }
+                    }
+
+                }
+            });
         }
     }
 

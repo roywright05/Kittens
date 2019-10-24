@@ -12,4 +12,7 @@
     <dimen name="size_100">100dp</dimen>
     <dimen name="size_2">2dp</dimen>
     <dimen name="text_36">36sp</dimen>
+    <dimen name="size_300">300dp</dimen>
+    <dimen name="text_40">40sp</dimen>
+    <dimen name="text_30">30sp</dimen>
 </resources>
