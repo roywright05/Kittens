@@ -4,11 +4,13 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.kittens.model.ListItem;
 import com.squareup.picasso.Picasso;
 
@@ -46,14 +48,11 @@ public class KittyAdapter extends RecyclerView.Adapter<KittyAdapter.KittyViewHol
         String creator = listItem.getCreator();
         int likes = listItem.getNumOfLikes();
 
+        //Picasso.get().load(imageUrl).fit().centerInside().into(holder.mCircleImageView);
         holder.tvCreator.setText(creator);
         holder.tvLikes.setText("Likes: " + likes);
-        //holder.mCircleImageView.setImageResource();
 
-        Picasso
-                .get().load(imageUrl)
-                .fit().centerInside()
-                .into(holder.mCircleImageView);
+        //Picasso.get().load(imageUrl).fit().centerInside().into(holder.mCircleImageView);
 
     }
 
@@ -63,10 +62,10 @@ public class KittyAdapter extends RecyclerView.Adapter<KittyAdapter.KittyViewHol
         return mListItems.size();
     }
 
-    public static class KittyViewHolder extends RecyclerView.ViewHolder{
+    public class KittyViewHolder extends RecyclerView.ViewHolder{
 
-        CircleImageView mCircleImageView;
-        TextView tvCreator, tvLikes;
+        public CircleImageView mCircleImageView;
+        public TextView tvCreator, tvLikes;
 
         public KittyViewHolder(@NonNull View itemView) {
             super(itemView);

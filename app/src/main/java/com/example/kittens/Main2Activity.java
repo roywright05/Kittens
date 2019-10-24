@@ -33,7 +33,10 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        //setAdapter();
+        setAdapter();
+    }
+
+    public void setAdapter(){
 
         mRecyclerView = findViewById(R.id.recyclerview);
         mRecyclerView.setHasFixedSize(true);
@@ -43,18 +46,6 @@ public class Main2Activity extends AppCompatActivity {
 
         mRequestQueue = Volley.newRequestQueue(this);
         parseJSON();
-    }
-
-    public void setAdapter(){
-
-//        mRecyclerView = findViewById(R.id.recyclerview);
-//        mRecyclerView.setHasFixedSize(true);
-//        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-//
-//        mListItems = new ArrayList<>();
-//
-//        mRequestQueue = Volley.newRequestQueue(this);
-//        parseJSON();
 
     }
 
@@ -79,7 +70,7 @@ public class Main2Activity extends AppCompatActivity {
                                 JSONObject hit = jsonArray.getJSONObject(i);
 
                                 String creatorName = hit.getString("user");
-                                String imageUrl = hit.getString("webformatURL");
+                                String imageUrl = hit.getString("largeImageURL");
                                 int likeCount = hit.getInt("likes");
 
                                 mListItems.add(new ListItem( imageUrl, creatorName, likeCount));

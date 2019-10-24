@@ -6,10 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+
+import com.squareup.picasso.Picasso;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
 
    private  ImageButton button;
+
+   private CircleImageView civMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -15,6 +15,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="55">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Whiskerbook"
+            android:textColor="#fff"
+            android:layout_marginTop="@dimen/size_20"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_36"/>
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civ_image"
         android:layout_width="@dimen/size_150"
@@ -24,6 +34,7 @@
         android:src="@drawable/kitten_1"
         app:civ_border_color="@color/brown"
         app:civ_border_width="@dimen/size_5" />
+
 
         <TextView
             android:id="@+id/tv_description"

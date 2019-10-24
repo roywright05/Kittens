@@ -11,4 +11,5 @@
     <dimen name="size_1000">100dp</dimen>
     <dimen name="size_100">100dp</dimen>
     <dimen name="size_2">2dp</dimen>
+    <dimen name="text_36">36sp</dimen>
 </resources>

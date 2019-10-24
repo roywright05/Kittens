@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -17,10 +18,10 @@
             android:id="@+id/civ_large_image"
             android:layout_width="@dimen/size_150"
             android:layout_height="@dimen/size_150"
-            app:civ_border_width="@dimen/size_2"
-            app:civ_border_color="@color/brown"
             android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher_round"/>
+            app:civ_border_color="@color/dark_blue"
+            app:civ_border_width="@dimen/size_2"
+            android:src="@mipmap/ic_launcher"/>
 
         <TextView
             android:id="@+id/tv_creator"
